@@ -1,0 +1,4 @@
+module CU8g2SDL [system] {
+    header "stubs.h"
+    export *
+}
