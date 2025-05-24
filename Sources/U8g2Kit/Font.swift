@@ -9,7 +9,7 @@ public struct Font {
     }
 
     public init() {
-        self.rawValue = CU8g2.u8x8_font_5x7_f
+        self.rawValue = CU8g2.u8g2_font_6x10_mf
     }
 }
 
