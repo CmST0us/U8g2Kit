@@ -33,9 +33,8 @@ class App {
         
         driver.withUnsafeU8x8 { u8x8 in
             u8x8_ClearDisplay(u8x8)
-            u8x8_SetFont(u8x8, u8x8_font_7x14_1x2_f )
+            u8x8_SetFont(u8x8, Font.u8x8_font_8x13_1x2_f.rawValue)
             u8x8_Draw1x2String(u8x8, 0, 0, "Hello World!");
-            u8x8_Draw2x2String(u8x8, 0, 4, "Hello World!");
         }
 
         while( u8g_sdl_get_key() < 0 )
