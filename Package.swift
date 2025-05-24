@@ -13,6 +13,9 @@ let package = Package(
         .library(
             name: "CU8g2",
             targets: ["CU8g2"]),
+        .library(
+            name: "CU8g2SDL",
+            targets: ["CU8g2SDL"]),
     ],
     dependencies: [
         .package(url: "https://github.com/CmST0us/SwiftSDL2.git", branch: "main"),
