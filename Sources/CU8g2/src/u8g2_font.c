@@ -101,6 +101,30 @@ void u8g2_font_AdjustXYToDrawP(const void *font, const char *s, u8g2_uint_t *x, 
 /* use case: Baseline origin known, return minimal box */
 void u8g2_font_GetStrMinBox(u8g2_t *u8g2, const void *font, const char *s, u8g2_uint_t *x, u8g2_uint_t *y, u8g2_uint_t *width, u8g2_uint_t *height);
 
+int8_t u8g2_GetMaxCharWidth(u8g2_t *u8g2) {
+  return u8g2->font_info.max_char_width;
+}
+
+int8_t u8g2_GetMaxCharHeight(u8g2_t *u8g2) {
+  return u8g2->font_info.max_char_height;
+}
+
+int8_t u8g2_GetAscent(u8g2_t *u8g2) {
+  return u8g2->font_info.ascent_A;
+}
+
+int8_t u8g2_GetDescent(u8g2_t *u8g2) {
+  return u8g2->font_info.descent_g;
+}
+
+int8_t u8g2_GetFontAscent(u8g2_t *u8g2) {
+  return u8g2->font_ref_ascent;
+}
+
+int8_t u8g2_GetFontDescent(u8g2_t *u8g2) {
+  return u8g2->font_ref_descent;
+}
+
 /* procedures */
 
 /*========================================================================*/

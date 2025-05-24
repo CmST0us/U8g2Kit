@@ -1952,12 +1952,12 @@ u8g2_uint_t u8g2_DrawUTF8X2(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, const ch
 u8g2_uint_t u8g2_DrawExtendedUTF8(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, uint8_t to_left, u8g2_kerning_t *kerning, const char *str);
 u8g2_uint_t u8g2_DrawExtUTF8(u8g2_t *u8g2, u8g2_uint_t x, u8g2_uint_t y, uint8_t to_left, const uint16_t *kerning_table, const char *str);
 
-#define u8g2_GetMaxCharHeight(u8g2) ((u8g2)->font_info.max_char_height)
-#define u8g2_GetMaxCharWidth(u8g2) ((u8g2)->font_info.max_char_width)
-#define u8g2_GetAscent(u8g2) ((u8g2)->font_ref_ascent)
-#define u8g2_GetDescent(u8g2) ((u8g2)->font_ref_descent)
-#define u8g2_GetFontAscent(u8g2) ((u8g2)->font_ref_ascent)
-#define u8g2_GetFontDescent(u8g2) ((u8g2)->font_ref_descent)
+int8_t u8g2_GetMaxCharWidth(u8g2_t *u8g2);
+int8_t u8g2_GetMaxCharHeight(u8g2_t *u8g2);
+int8_t u8g2_GetAscent(u8g2_t *u8g2);
+int8_t u8g2_GetDescent(u8g2_t *u8g2);
+int8_t u8g2_GetFontAscent(u8g2_t *u8g2);
+int8_t u8g2_GetFontDescent(u8g2_t *u8g2);
 
 uint8_t u8g2_IsAllValidUTF8(u8g2_t *u8g2, const char *str);	// checks whether all codes are valid
 
