@@ -1,17 +1,12 @@
 import CU8g2
 
-@_silgen_name("u8g2_cb_r0")
-public var u8g2_cb_r0: u8g2_cb_t
+public var u8g2_cb_r0: u8g2_cb_t = CU8g2.u8g2_cb_r0
 
-@_silgen_name("u8g2_cb_r1")
-public var u8g2_cb_r1: u8g2_cb_t
+public var u8g2_cb_r1: u8g2_cb_t = CU8g2.u8g2_cb_r1
 
-@_silgen_name("u8g2_cb_r2")
-public var u8g2_cb_r2: u8g2_cb_t
+public var u8g2_cb_r2: u8g2_cb_t = CU8g2.u8g2_cb_r2
 
-@_silgen_name("u8g2_cb_r3")
-public var u8g2_cb_r3: u8g2_cb_t
-
+public var u8g2_cb_r3: u8g2_cb_t = CU8g2.u8g2_cb_r3
 
 func u8g2_driver_byte_cb(_ u8x8: UnsafeMutablePointer<u8x8_t>?, _ msg: UInt8, _ arg_int: UInt8, _ arg_ptr: UnsafeMutableRawPointer?) -> UInt8 {
     guard let u8x8 = u8x8 else { return 0 }
