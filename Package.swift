@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -17,6 +17,11 @@ let package = Package(
             name: "CU8g2SDL",
             targets: ["CU8g2SDL"]),
     ],
+    traits: [
+        "Embedded",
+        "Linux",
+        .default(enabledTraits: ["Linux"])
+    ],
     dependencies: [
         .package(url: "https://github.com/CmST0us/SwiftSDL2.git", branch: "main"),
     ],
@@ -24,13 +29,16 @@ let package = Package(
         .target(
             name: "CU8g2",
             cSettings: [
-                .define("U8G2_USE_LARGE_FONTS", .when(platforms: [.linux])),
+                .define("U8G2_USE_LARGE_FONTS", .when(traits: ["Linux"])),
                 .unsafeFlags(["-Wno-pointer-sign"])
             ]),
 
         .target(
             name: "U8g2Kit",
-            dependencies: ["CU8g2"]
+            dependencies: ["CU8g2"],
+            swiftSettings: [
+                .swiftLanguageMode(.v5)
+            ]
         ),
 
         .target(
@@ -45,7 +53,10 @@ let package = Package(
             dependencies: [
                 "U8g2Kit",
                 "CU8g2SDL",
-                .product(name: "SDL2", package: "SwiftSDL2")]
+                .product(name: "SDL2", package: "SwiftSDL2")],
+            swiftSettings: [
+                .swiftLanguageMode(.v5)
+            ]
         ),
     ]
 )
