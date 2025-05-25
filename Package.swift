@@ -25,6 +25,8 @@ let package = Package(
             name: "CU8g2",
             cSettings: [
                 .define("U8G2_USE_LARGE_FONTS"),
+                .define("U8X8_WITH_USER_PTR"),
+                .define("U8X8_USE_PINS"),
                 .unsafeFlags(["-Wno-pointer-sign"])
             ]),
 
