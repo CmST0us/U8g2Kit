@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "CU8g2",
             cSettings: [
-                .define("U8G2_USE_LARGE_FONTS"),
+                .define("U8G2_USE_LARGE_FONTS", .when(platforms: [.linux])),
                 .unsafeFlags(["-Wno-pointer-sign"])
             ]),
 
