@@ -94,7 +94,7 @@
 #endif
 
 /* Define this for an additional user pointer inside the u8x8 data struct */
-#define U8X8_WITH_USER_PTR
+//#define U8X8_WITH_USER_PTR
 
 
 /* Undefine this to remove u8x8_SetFlipMode function */
@@ -198,7 +198,7 @@ uint8_t u8x8_pgm_read_esp(const uint8_t * addr);   /* u8x8_8x8.c */
 #define U8X8_USE_PINS
 #endif
 
-#if defined(__ARM_LINUX__) || defined(unix) || defined(__unix__) || defined(__unix)
+#if defined(__ARM_LINUX__) || defined(unix) || defined(__unix__) || defined(__unix) || defined(__RISCV__)
 /* https://github.com/olikraus/u8g2/pull/1666 */
 #define U8X8_USE_PINS
 #define U8X8_WITH_USER_PTR
