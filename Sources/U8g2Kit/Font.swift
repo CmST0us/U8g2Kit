@@ -13,6 +13,7 @@ public struct Font {
     }
 }
 
+#if !Embedded
 // https://github.com/olikraus/u8g2/wiki/fntlistall
 // https://github.com/olikraus/u8g2/wiki/fntlist8x8
 extension Font {
@@ -147,10 +148,6 @@ extension Font {
     public static var u8x8_font_px437wyse700b_2x2_f: Font {Font(rawValue: CU8g2.u8x8_font_px437wyse700b_2x2_f)}
     public static var u8x8_font_px437wyse700b_2x2_r: Font {Font(rawValue: CU8g2.u8x8_font_px437wyse700b_2x2_r)}
     public static var u8x8_font_px437wyse700b_2x2_n: Font {Font(rawValue: CU8g2.u8x8_font_px437wyse700b_2x2_n)}
-    public static var u8g2_font_u8glib_4_tf: Font {Font(rawValue: CU8g2.u8g2_font_u8glib_4_tf)}
-    public static var u8g2_font_u8glib_4_tr: Font {Font(rawValue: CU8g2.u8g2_font_u8glib_4_tr)}
-    public static var u8g2_font_u8glib_4_hf: Font {Font(rawValue: CU8g2.u8g2_font_u8glib_4_hf)}
-    public static var u8g2_font_u8glib_4_hr: Font {Font(rawValue: CU8g2.u8g2_font_u8glib_4_hr)}
     public static var u8g2_font_m2icon_5_tf: Font {Font(rawValue: CU8g2.u8g2_font_m2icon_5_tf)}
     public static var u8g2_font_m2icon_7_tf: Font {Font(rawValue: CU8g2.u8g2_font_m2icon_7_tf)}
     public static var u8g2_font_m2icon_9_tf: Font {Font(rawValue: CU8g2.u8g2_font_m2icon_9_tf)}
@@ -2135,3 +2132,5 @@ extension Font {
     public static var u8g2_font_px437wyse700b_mr: Font {Font(rawValue: CU8g2.u8g2_font_px437wyse700b_mr)}
     public static var u8g2_font_px437wyse700b_mn: Font {Font(rawValue: CU8g2.u8g2_font_px437wyse700b_mn)}
 }
+
+#endif
