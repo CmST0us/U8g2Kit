@@ -9,12 +9,15 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "U8g2Kit",
+            type: .static,
             targets: ["U8g2Kit"]),
         .library(
             name: "CU8g2",
+            type: .static,
             targets: ["CU8g2"]),
         .library(
             name: "CU8g2SDL",
+            type: .static,
             targets: ["CU8g2SDL"]),
     ],
     traits: [
